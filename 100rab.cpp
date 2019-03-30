@@ -50,3 +50,22 @@ int main()
 		printf("\n For process %d\n",j+1);
 		printf("Left Burst time= %d\n",burst[j]);
               }
+                        else
+		{
+		burst[j] = burst[j]-tq2;
+	            printf(" For process %d\n", j+1);
+		printf("Left Burst time= %d\n", burst[j]);	
+		}	
+	
+	int k ,t ;
+        for(j=0; j<a; j++)
+	{
+                        for(k=j+1; k<a; k++)
+		{
+                        if(burst[j]>burst[k])
+		{
+                                   t = burst[j];
+		           burst[j] = burst[k];
+		           burst[k] = t;
+			}
+
