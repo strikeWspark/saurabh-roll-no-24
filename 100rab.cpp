@@ -68,4 +68,17 @@ int main()
 		           burst[j] = burst[k];
 		           burst[k] = t;
 			}
-
+		}
+	}
+        
+            int c[]={6,9,7,16,30,19,25,35,42,21};
+	for(j=0;j<a;j++)
+	{
+		t_arrival[j]=c[j]-arrival[j];
+		waiting[j]=t_arrival[j]-burst1[j];
+		printf("\n Completion time for process %d : %d \n", j+1, c[j]);
+		printf("Turn arround time for process %d : %d \n",j+1,t_arrival[j]);
+		printf("Waiting time for process %d : %d \n",j+1,waiting[j]);
+		average_Turn = average_Turn + t_arrival[j];
+		average_Wait = average_Wait + waiting[j];
+	}
