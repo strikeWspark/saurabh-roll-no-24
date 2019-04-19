@@ -82,3 +82,8 @@ int main()
 		average_Turn = average_Turn + t_arrival[j];
 		average_Wait = average_Wait + waiting[j];
 	}
+	average_Turn = average_Turn / a;
+	average_Wait = average_Wait / a;
+	printf("\n\n Average turn around time: %d\n",average_Turn);
+	printf(" Average waiting time: %d\n",average_Wait);
+	}
